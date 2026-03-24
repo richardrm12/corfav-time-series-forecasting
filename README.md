@@ -34,7 +34,7 @@ store-sales/
 
 1. **Clonar este repositorio:**
     ```bash
-    git clone <tu-URL-del-repositorio>
+    git clone https://github.com/richardrm12/corfav-time-series-forecasting
     cd store-sales
     ```
 
