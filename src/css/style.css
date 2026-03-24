@@ -131,3 +131,9 @@
     .block-container {
         padding-bottom: 0rem !important;
     }
+
+
+    /* Hacer que el Header se pierda en el fondo */
+    [data-testid="stHeader"] {
+        background-color: transparent !important;
+    }
