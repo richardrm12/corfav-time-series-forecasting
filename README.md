@@ -59,4 +59,4 @@ store-sales/
     ```
 
 ---
-*Desarrollado por [Richard Ramirez].* 👨‍💻
+*Desarrollado por Richard Ramirez.*
