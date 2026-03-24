@@ -1,0 +1,50 @@
+# Entornos Virtuales
+.venv/
+venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Datos (CRÍTICO: No subir datasets de Kaggle, pueden pesar gigabytes)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+data/processed/*.pkl
+
+# Outputs, reportes y predicciones
+outputs/*.csv
+outputs/*.pkl
+outputs/*.png
+outputs/*.html
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS Files
+.DS_Store
+Thumbs.db

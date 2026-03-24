@@ -1,0 +1,133 @@
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@400,0,0,24');
+
+    /* Variables de color de modo light estricto */
+    :root {
+        --primary: #b81120;
+        --surface-bg: #ffffff;
+        --text-main: #0f172a;
+        --text-muted: #475569;
+        --border-color: #e2e8f0;
+    }
+
+    /* Para Streamlit, forzando colores a nivel raÃ­z y elementos clave */
+    .stApp {
+        background-color: #ffffff !important;
+    }
+    
+    /* Forzar color y visibilidad del Expander */
+    [data-testid="stExpander"] details summary {
+        background-color: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+    [data-testid="stExpander"] details summary p, 
+    [data-testid="stExpander"] details summary span {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+    }
+    [data-testid="stExpander"] details summary svg {
+        fill: #0f172a !important;
+        color: #0f172a !important;
+    }
+
+    [data-testid="stSidebar"] {
+        background-color: #f1f5f9 !important;
+        border-right: 1px solid #e2e8f0;
+    }
+
+    [data-testid="stSidebar"] * {
+        color: #0f172a !important;
+    }
+
+    /* Estilos para Selectbox (Dropdowns) */
+    div[data-baseweb="select"] > div {
+        background-color: #ffffff !important;
+        border-color: #e2e8f0 !important;
+        border-radius: 0.5rem;
+    }
+
+    /* Ocultar nativos */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    
+    /* ConfiguraciÃ³n de Cards modo Light */
+    .bento-card {
+        background-color: #ffffff;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+        border: 1px solid #e2e8f0; /* slate-200 */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+    .bento-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 16px -4px rgba(0, 0, 0, 0.1);
+        border-color: var(--hover-color, #b81120);
+    }
+    /* Estilizar la barra de desplazamiento */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #e2e8f0;
+        border-radius: 10px;
+    }
+    .bento-title {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #64748b; /* slate-500 */
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+    }
+    .bento-value {
+        font-size: 2.25rem;
+        font-weight: 800;
+        color: #b81120; /* primary */
+        font-family: 'Manrope', sans-serif;
+    }
+    
+    /* Model Architecture Card: Mantenido oscuro segÃºn HTML de referencia */
+    .dark-card {
+        background-color: #1e293b; /* slate-800 */
+        color: #ffffff;
+        border-radius: 0.75rem;
+        padding: 2rem;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); /* shadow-lg */
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border: 1px solid #334155; /* slate-700 */
+    }
+
+    /* Utils */
+    .icon-box {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        background-color: #f8fafc; /* slate-50 */
+        border: 1px solid #f1f5f9; /* slate-100 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+
+    @keyframes pulse-green {
+        0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+
+    /* Reducir espacio en blanco al final de la página Streamlit */
+    .block-container {
+        padding-bottom: 0rem !important;
+    }
