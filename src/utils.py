@@ -8,18 +8,18 @@ OUTPUT_DIR = "outputs/"
 @st.cache_data
 def load_data():
     """Carga y re-estructura los datos necesarios (TODO EL HISTORIAL)."""
-    train = pd.read_csv(os.path.join(DATA_DIR, 'train.csv'), parse_dates=['date'])
-    test = pd.read_csv(os.path.join(DATA_DIR, 'test.csv'), parse_dates=['date'])
+    train = pd.read_csv(os.path.join(DATA_DIR, 'train.csv.gz'), parse_dates=['date'])
+    test = pd.read_csv(os.path.join(DATA_DIR, 'test.csv.gz'), parse_dates=['date'])
     
     try:
-        preds = pd.read_csv(os.path.join(OUTPUT_DIR, 'submission_final.csv'))
+        preds = pd.read_csv(os.path.join(OUTPUT_DIR, 'submission_final.csv.gz'))
         test_preds = test.merge(preds, on='id', how='left')
     except FileNotFoundError:
         try:
-            preds = pd.read_csv(os.path.join(OUTPUT_DIR, 'validation_final.csv'))
+            preds = pd.read_csv(os.path.join(OUTPUT_DIR, 'validation_final.csv.gz'))
             test_preds = test.merge(preds, on='id', how='left')
         except FileNotFoundError:
-            st.error("No se encontró validation_final.csv ni submission_final.csv")
+            st.error("No se encontró validation_final.csv.gz ni submission_final.csv.gz")
             test_preds = test.copy()
             test_preds['sales'] = 0
 
