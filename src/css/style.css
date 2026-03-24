@@ -48,10 +48,10 @@
         border-radius: 0.5rem;
     }
 
-    /* Ocultar nativos */
+    /* Ocultar nativos (mantenemos header visible para no perder el botón del sidebar) */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
+    /* header {visibility: hidden;} */
     
     /* ConfiguraciÃ³n de Cards modo Light */
     .bento-card {
